@@ -1,3 +1,5 @@
+db.Categories.insert(
+
 [
     {
         "id": "1",
@@ -16,3 +18,4 @@
         "category": "Appliances"
     }
 ]
+)
