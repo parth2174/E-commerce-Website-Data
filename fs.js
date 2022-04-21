@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 let fs = require('fs');
 
 /*
@@ -29,7 +29,7 @@ fs.unlink('Mycode.txt',(err) => {
 fs.rename('Mytext.txt','Mytext1.txt',(err) => {
     if(err) throw err;
     console.log('File Renamed')
-=======
+
 let fs = require('fs');
 
 /*
@@ -60,5 +60,4 @@ fs.unlink('Mycode.txt',(err) => {
 fs.rename('Mytext.txt','Mytext1.txt',(err) => {
     if(err) throw err;
     console.log('File Renamed')
->>>>>>> 513776ab767e6c3e6ea393405e2ead41e18d5698
 })

@@ -1,4 +1,4 @@
-<<<<<<< HEAD
+
 let http = require('http');
 
 // req > what we will pass to server
@@ -9,7 +9,7 @@ let server = http.createServer((req,res) => {
     res.end();
 })
 
-=======
+
 let http = require('http');
 
 // req > what we will pass to server
@@ -20,5 +20,5 @@ let server = http.createServer((req,res) => {
     res.end();
 })
 
->>>>>>> 513776ab767e6c3e6ea393405e2ead41e18d5698
+
 server.listen(7600)
