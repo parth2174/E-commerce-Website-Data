@@ -5,7 +5,7 @@ const MongoClient = mongo.MongoClient;
 const dotenv = require('dotenv');
 dotenv.config()
 let port = process.env.PORT || 8230;
-const mongoUrl = "mongodb://localhost:27017"
+//const mongoUrl = "mongodb://localhost:27017"
 const mongoLiveUrl = "mongodb+srv://parthsheth:parth5196@cluster0.zi1ko.mongodb.net/EcommerceWebsiteData?retryWrites=true&w=majority";
 //const bodyParser = require('body-parser');
 //const cors = require('cors');
@@ -57,7 +57,7 @@ app.get('/Products',(req,res) => {
 
 
 // Connection with db
-MongoClient.connect(mongoUrl, (err, Client) => {
+MongoClient.connect(mongoLiveUrl, (err, Client) => {
     if(err) console.log(`Error while connecting`);
     db = Client.db('EcommerceWebsiteData');
     app.listen(port,() => {
