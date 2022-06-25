@@ -47,6 +47,39 @@ app.get('/Categories',(req,res) => {
     })
 })
 
+
+app.get('/Mobiles/:id',(req,res) => {
+    let mobileId = Number(req.params.id);
+    //let id = req.params.id;
+    //let id = Number(req.params.mobile_id);
+    //db.collection('mobiles').find().toArray((err,result) => {  
+    //let mobileId = mongo.ObjectId(req.params.id)
+    //db.collection('Mobiles').find({_id:mobileId}).toArray((err,result) => {
+        //if(err) throw err;
+
+    db.collection('Mobiles').find().toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
+
+app.get ('/mobiles/',(req,res) => {
+    let query = {};
+    let brandId = Number(req.query.brand_id)
+    let uniqueId = Number(req.query.unique_id)
+    if(brandId){
+        query = {brand_id:brandId}
+    }else if(uniqueId){
+        query = {unique_id:uniqueId}
+    }
+
+    db.collection('Mobiles').find(query).toArray((err,result) => {
+        if(err) throw err;
+        res.send(result)
+    })
+})
+
 app.get('/Products',(req,res) => {
     db.collection('Products').find().toArray((err,result) => {
         if(err) throw err;
